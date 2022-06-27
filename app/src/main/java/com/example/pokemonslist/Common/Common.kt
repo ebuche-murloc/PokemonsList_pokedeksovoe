@@ -6,4 +6,5 @@ import java.util.ArrayList
 
 object Common {
     var pokemonList:List<Pokemon> = ArrayList()
+    val KEY_ENABLE_HOME = "position"
 }
