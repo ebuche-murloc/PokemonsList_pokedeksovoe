@@ -1,13 +1,14 @@
 package com.example.pokemonslist
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemonslist.Adapter.PokemonListAdapter
 import com.example.pokemonslist.Common.Common
 import com.example.pokemonslist.Common.ItemOffsetDecoration
@@ -40,7 +41,7 @@ class PokemonList : Fragment() {
         recycler_view = itemView.findViewById(R.id.pokemon_recyclerview) as RecyclerView
         recycler_view.setHasFixedSize(true)
         recycler_view.layoutManager = GridLayoutManager(activity, 2)
-        val itemDecoration = ItemOffsetDecoration(activity!!, R.dimen.spacing)
+        val itemDecoration = ItemOffsetDecoration(requireActivity()!!, R.dimen.spacing)
         recycler_view.addItemDecoration(itemDecoration)
 
         fetchData()
@@ -54,7 +55,7 @@ class PokemonList : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ pokemonDex ->
                 Common.pokemonList = pokemonDex.pokemon!!
-                val adapter = PokemonListAdapter(activity!!, Common.pokemonList)
+                val adapter = PokemonListAdapter(requireActivity()!!, Common.pokemonList)
 
                 recycler_view.adapter = adapter
             }

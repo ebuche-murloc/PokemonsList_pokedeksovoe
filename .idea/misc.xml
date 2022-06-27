@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/bda20/AndroidStudioProjects/PokemonsList/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/bda20/AndroidStudioProjects/PokemonsList/app/src/main/res/layout/chip_item.xml" value="0.33" />
+        <entry key="..\:/Users/bda20/AndroidStudioProjects/PokemonsList/app/src/main/res/layout/fragment_pokemon_detail.xml" value="0.33" />
         <entry key="..\:/Users/bda20/AndroidStudioProjects/PokemonsList/app/src/main/res/layout/fragment_pokemon_list.xml" value="0.35280797101449274" />
         <entry key="..\:/Users/bda20/AndroidStudioProjects/PokemonsList/app/src/main/res/layout/pokemon_list_item.xml" value="0.35280797101449274" />
       </map>
